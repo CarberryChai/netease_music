@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "vuedx-typecheck . && vite build"
+    "build": "vuedx-typecheck . && vite build",
+    "lint": "eslint 'src/**/*.{js,ts,tsx,vue}' --quiet --fix"
   },
   "dependencies": {
     "vue": "^3.0.5",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
     "@vitejs/plugin-vue": "^1.0.3",
     "@vitejs/plugin-vue-jsx": "^1.0.2",
     "@vue/compiler-sfc": "^3.0.5",
@@ -17,8 +20,12 @@
     "@vuedx/typescript-plugin-vue": "^0.4.1",
     "autoprefixer": "^10.2.1",
     "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.4.1",
     "postcss": "^8.2.4",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "sass": "^1.32.0",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.3",

@@ -34,8 +34,8 @@ const Toast = defineComponent({
       }, props.duration)
     })
     return () => (
-      <Transition name='fade' appear onAfterLeave={props.close}>
-        {show.value && <div class='wrapper'>{props.content}</div>}
+      <Transition name="fade" appear onAfterLeave={props.close}>
+        {show.value && <div class="wrapper">{props.content}</div>}
       </Transition>
     )
   },
@@ -45,7 +45,7 @@ export default function toast(
   content: string,
   duration: 2000
 ): Promise<undefined> {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const div = document.createElement('div')
     const vnode: VNode = createVNode(
       Toast,

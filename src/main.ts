@@ -1,8 +1,8 @@
+import toast from '@/components/Toast'
 import { createApp } from 'vue'
 import App from './App.vue'
-import toast from './components/Toast'
 import './index.css'
+import router from './router'
 
 window.toast = toast
-const app = createApp(App)
-app.mount('#app')
+createApp(App).use(router).mount('#app')
