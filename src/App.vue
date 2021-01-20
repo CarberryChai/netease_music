@@ -1,25 +1,15 @@
 <template>
-  <Welcome msg="Carberry" />
+  <h1>{{ count }}</h1>
   <Button @click="handler" type="primary">Click</Button>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-import Welcome from './components/Welcome.vue'
+<script lang="ts" setup>
 import Button from './components/Button.vue'
-
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const handler = () => {
-      window.alert('Hello')
-    }
-    return { handler }
-  },
-  components: {
-    Welcome,
-    Button,
-  },
-})
+import { ref } from 'vue'
+const count = ref(0)
+const handler = () => {
+  window.toast(count.value + '')
+  count.value++
+}
 </script>
 
 <style>

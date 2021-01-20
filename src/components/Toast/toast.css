@@ -1,0 +1,15 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.wrapper {
+  transform: translate(-50%, -50%);
+  padding: 0.5em 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply text-white rounded-lg text-base fixed left-1/2 top-1/2;
+}
