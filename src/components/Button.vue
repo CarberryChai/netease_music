@@ -6,7 +6,7 @@
     :type="htmlType"
     @click="emit('click')"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
@@ -44,8 +44,7 @@ const klass = computed(() => ({
 }))
 </script>
 
-<!-- @vue-ignore -->
-<style>
+<style lang="scss">
 .btn {
   outline: none;
   padding: 0.5em 1.5em;
@@ -61,12 +60,14 @@ const klass = computed(() => ({
   &:focus {
     outline: none;
   }
-}
-.btn-primary {
-  @apply bg-blue-500 text-white border-none;
-}
-.btn-disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+  &-primary {
+    color: white;
+    border: none;
+    @apply bg-blue-500;
+  }
+  &-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 }
 </style>

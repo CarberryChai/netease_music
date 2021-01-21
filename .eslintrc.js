@@ -13,14 +13,23 @@ module.exports = {
     },
   },
   extends: [
-    'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
-    'prettier/vue',
+    'plugin:vue/vue3-recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: 2,
+        multiline: {
+          max: 1,
+          allowFirstLine: false,
+        },
+      },
+    ],
   },
 }

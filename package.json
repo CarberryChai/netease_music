@@ -7,10 +7,13 @@
     "lint": "eslint 'src/**/*.{js,ts,tsx,vue}' --quiet --fix"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "element-plus": "^1.0.2-beta.28",
     "vue": "^3.0.5",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "@vitejs/plugin-vue": "^1.0.3",
@@ -24,7 +27,6 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.4.1",
     "postcss": "^8.2.4",
-    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "sass": "^1.32.0",
     "tailwindcss": "^2.0.2",
